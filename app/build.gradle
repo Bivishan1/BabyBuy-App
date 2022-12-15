@@ -1,17 +1,20 @@
-
 plugins {
+    // build plugins are to be referred here
+    // you specify in build.gradle(project) first so it will get downloaded
+    // and specifying here will instruct android studio to use it when building the projects
+    // otherwise it wont use it even it is downloaded.
     id 'com.android.application'
     id 'com.google.gms.google-services'
 }
 
 android {
     namespace 'com.example.linearapp'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.linearapp"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -30,20 +33,34 @@ android {
     }
 }
 
+// ADD DEPENDENCIES FOR YOUR APP HERE
+// FOR EG: IF YOU NEED FIREBASE AUTH, OR ANY IMAGE LOADING LIBRARY SUCH AS GLIDE,
+// OR ANY EXTERNAL LIBRARY IN YOUR PROJECT ADD THE DEPENDENCY HERE
+// The dependency added here are searched online and downloaded automatically.
+// Searched online? where and how?? => The location to be searched is specified in settings.gradle
 dependencies {
-
-
+    // androidx is latest android set of libraries which is extension of the android platform.
+    // like there is android platform installed in the phone already and only software update
+    // can change the software on that phone. so this androidx is the dynamic way to push new software
+    // changes by incorporating within the app itself rather than as software update so users are getting
+    // updates daily if they changes stuff. So, androidx related lib you see below are very crucial and
+    // the material components stuff which google introduces as their form of design solution i.e.
+    // to design the app ui. it helps to style default material style to every view you use be it
+    // textview or imageview
     implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.core:core:1.9.0'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Import the Firebase BoM which contains all the compatible versions of firebase
+    // related products
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+    implementation 'com.google.firebase:firebase-firestore:24.4.1'
+
+    // test related dependencies
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
-
-    // Import the Firebase BoM
-    implementation platform('com.google.firebase:firebase-bom:31.1.1')
-    implementation 'com.google.firebase:firebase-firestore'
-
 }
 
 

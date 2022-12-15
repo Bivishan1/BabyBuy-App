@@ -1,3 +1,8 @@
+// Here libraries that are used to build the android projects are auto downloaded
+// from the location mentioned below. Although they dont look like they are using url in particular
+// dont worry it works. If you use custom build plugins/libs that you find in the github
+// and its hosted in different platform it will let us know so we can add the respective url
+// here to get that plugin. The way to add custom url is shown below.
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -5,12 +10,18 @@ pluginManagement {
         mavenCentral()
     }
 }
+
+// I said files are searched online right? This is a dependency resolution block.
+// We specified google, mavencentral and custom url jitpack.io which hosts most of the libraries
+// that we need. Libraries here is one that are needed for your projects for eg custom imageview library or image loading
+// library etc. not the one that is used to build the project. Those libs are called plugins and the
+// place to search online to download such plugins in specified above.
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        maven { url "https://jitpack.io" }
+        maven { url "https://jitpack.io" } // this is how we can add custom url
     }
 }
 rootProject.name = "LinearApp"

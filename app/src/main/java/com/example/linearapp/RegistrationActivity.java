@@ -13,14 +13,15 @@ import android.widget.TextView;
 import com.google.android.material.snackbar.Snackbar;
 
 public class RegistrationActivity extends AppCompatActivity {
-    EditText edName, edEmail, edPassword,edCPassword;
+    EditText edName, edEmail, edPassword, edCPassword;
     TextView textView;
-Button btnRegister;
-private DatabaseHelper databaseHelper;
-private User user;
+    Button btnRegister;
+    private DatabaseHelper databaseHelper;
+    private User user;
 
-//string for get input edit text to string
+    //string for get input edit text to string
     String name, email, password, confirmPassword;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +49,7 @@ private User user;
 //                if (name.equals("") !! email.equals((" ")) {
 //
 //                })
-                if (name.isEmpty()){
+                if (name.isEmpty()) {
                     edName.setError("Name is Required");
                 } else if (email.isEmpty()) {
                     edEmail.setError("Email is required");
@@ -58,10 +59,9 @@ private User user;
                     edCPassword.setError("Confirm Password is required");
                 } else if (!password.equals(confirmPassword)) {
                     edCPassword.setError(("password and confirm password need to be same"));
-                }
-                else {
+                } else {
                     Boolean checkUser = databaseHelper.checkUserName(email);
-                    if (checkUser == false) {
+                    if (!checkUser) {
                         postDataToSQLite();
                     } else {
                         Snackbar.make(btnRegister, getString(R.string.error_email_exists), Snackbar.LENGTH_LONG).show();
