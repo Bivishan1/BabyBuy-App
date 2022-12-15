@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:scrollbars="vertical"
+    tools:context=".RegistrationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create New Account"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/josefinsansbold"
+            android:textStyle="bold"
+            android:textSize="30dp"
+
+            />
+
+        <EditText
+            android:id="@+id/textInputName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/edit_text_shape"
+            android:hint="Name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:minHeight="48dp"
+            android:padding="5dp" />
+
+        <EditText
+            android:id="@+id/textInputEditTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/edit_text_shape"
+            android:hint="Email"
+            android:inputType="text"
+            android:maxLines="1"
+            android:minHeight="48dp"
+            android:padding="5dp" />
+
+        <EditText
+            android:id="@+id/textInputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/edit_text_shape"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/textInputConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/edit_text_shape"
+            android:hint="ConfirmPassword"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_shape"
+            android:text="Register"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+
+            >
+
+            <TextView
+                android:id="@+id/textViewalreadyAccount"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="0.33"
+                android:ellipsize="end"
+                android:textAlignment="textEnd"
+                android:fontFamily="@font/josefinsansbold"
+                android:maxLines="1"
+                android:padding="0dp"
+                android:textStyle="bold"
+                android:text="Already Have One? "
+                android:textSize="20dp"  />
+
+            <TextView
+                android:id="@+id/textViewLinkLogin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:layout_weight="0.59"
+                android:text="@string/login"
+                android:fontFamily="@font/josefinsansbold"
+                android:paddingLeft="8dp"
+                android:textSize="20dp"
+                android:onClick="textViewLinkRegister"
+                android:clickable="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>

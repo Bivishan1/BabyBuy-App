@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BabyBuy</string>
+    <string name="myText">HelloString</string>
+    <string name="Submit">Submit</string>
+    <string name="tvYourname">Your name here</string>
+    <string name="error_email_exists">error_email_exists</string>
+    <string name="register"><u>Register</u></string>
+    <string name="login"><u>Login</u></string>
+    <string name="forgot_password"><u>Forgot Password ?</u></string>
+
+</resources>

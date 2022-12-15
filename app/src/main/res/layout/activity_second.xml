@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".SecondActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back!!"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="33dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Your Name"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="73dp" />
+
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="Name"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="137dp" />
+</LinearLayout>
